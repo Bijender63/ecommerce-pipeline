@@ -41,7 +41,7 @@ def load_data():
 
 df = load_data()
 
-st.title("E-Commerce Sales Pipeline — Interactive Dashboard")
+st.title("E-Commerce Sales Pipeline")
 st.caption("Live data from an automated ETL pipeline (Python + SQLite + GitHub Actions)")
 
 # ---------------- Sidebar filters ----------------
@@ -109,7 +109,6 @@ with right:
     fig_cat = px.bar(
         by_category, x="category", y="net_revenue",
         title="Revenue by Category", labels={"net_revenue": "Net Revenue (₹)", "category": ""},
-        color="category",
     )
     st.plotly_chart(fig_cat, use_container_width=True)
 
